@@ -97,12 +97,4 @@ When running with Docker Compose, the backend’s `DB_HOST`, `DB_PORT`, `CORS_OR
 
 See Swagger UI `/api-docs` for schemas and examples.
 
-## Employer Brief (implemented)
-- Secure, scalable backend APIs with JWT + RBAC
-- Validation, error handling, versioned APIs
-- CRUD for Tasks with owner checks and admin list-all
-- Frontend to register, login, and perform CRUD
-- Documentation (Swagger + Postman)
-- Docker deployment with Postgres + Redis
-
 Postman collection: `postman_collection.json`.
