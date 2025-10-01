@@ -98,3 +98,11 @@ When running with Docker Compose, the backend’s `DB_HOST`, `DB_PORT`, `CORS_OR
 See Swagger UI `/api-docs` for schemas and examples.
 
 Postman collection: `postman_collection.json`.
+## Scalability Note
+
+This application is built with scalability in mind. While it currently runs as a single service, its containerized nature and design patterns allow for straightforward expansion:
+
+* **Load Balancing & Horizontal Scaling**: The `backend-api` is stateless (relying on JWTs). You can run multiple instances of this container and place them behind a load balancer (e.g., NGINX) to distribute traffic. This increases throughput and ensures high availability.
+* **Caching**: A Redis caching layer is already implemented for task reads to reduce database load. This strategy can be expanded to other frequent read operations. A distributed cache like Redis is essential for performance in a scaled-out environment.
+* **Microservices Architecture**: For a larger system, this monolith could be decomposed into microservices. For instance, `Authentication` and `Task Management` could become separate services, each with its own database and deployment pipeline. This allows for dedicated scaling of individual components.
+
