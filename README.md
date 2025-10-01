@@ -71,7 +71,7 @@ npm run dev
 PORT=8000
 DB_USER=your_postgres_user
 DB_PASSWORD=your_postgres_password
-DB_HOST=localhost
+DB_HOST=db
 DB_NAME=task_app_db
 DB_DIALECT=postgres
 DB_PORT=5432
